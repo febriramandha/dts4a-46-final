@@ -4,10 +4,24 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+// Import Routes dan Route di sini
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+// import { Provider } from "react-redux";
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    {/* <Provider> */}
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<App />}>
+
+        </Route>
+      </Routes>
+      {/* <App /> */}
+    </BrowserRouter>
+    {/* </Provider> */}
   </React.StrictMode>
 );
 
