@@ -1,12 +1,12 @@
-import logo from './assets/logo_movie.png';
+// import logo from './assets/logo_movie.png';
 import React from "react";
 import "./App.css";
 
 // import NavBar from "./components/NavBar.jsx";
 import AppNavBar from './components/AppNavBar';
 import Footer from './components/Footer';
-import LoginLayout from "./components/LoginLayout";
-import ListMovie from './components/ListMovie';
+// import LoginLayout from "./components/LoginLayout";
+// import ListMovie from './components/ListMovie';
 import { Outlet } from "react-router-dom";
 
 function App() {
@@ -23,10 +23,10 @@ function App() {
       {/* <NavBar /> */}
 
       <AppNavBar />
-      <ListMovie />
-      <Footer />
+      {/* <ListMovie /> */}
       {/* <LoginLayout /> */}
       <Outlet />
+      <Footer />
     </div>
   );
 }

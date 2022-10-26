@@ -1,19 +1,13 @@
 import React from "react";
-// import { Link } from "react-router-dom";
-// import '../assets/style.css';
+import { Link } from "react-router-dom";
 import logo from '../assets/logo_movie.png';
 
-// import Menu from '@mui/material/Menu';
-// import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 import RedeemIcon from '@mui/icons-material/Redeem';
 import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive';
 import Avatar from '@mui/material/Avatar';
 import Tooltip from '@mui/material/Tooltip';
-// import MenuItem from '@mui/material/MenuItem';
-// import AdbIcon from '@mui/icons-material/Adb';
 import { AppBar, Container, Button, Toolbar, Typography, Box, IconButton, Menu, MenuItem } from "@mui/material";
-// import { Container } from "@mui/system";
 
 const AppNavBar = () => {
 
@@ -76,40 +70,58 @@ const AppNavBar = () => {
                                     display: { xs: 'block', md: 'none' },
                                 }}
                             >
-                                <MenuItem onClick={handleCloseNavMenu}>
-                                    <Typography textAlign="center">Home</Typography>
-                                </MenuItem>
-                                <MenuItem onClick={handleCloseNavMenu}>
-                                    <Typography textAlign="center">Series</Typography>
-                                </MenuItem>
-                                <MenuItem onClick={handleCloseNavMenu}>
-                                    <Typography textAlign="center">Movie</Typography>
-                                </MenuItem>
-                                <MenuItem onClick={handleCloseNavMenu}>
-                                    <Typography textAlign="center">New and Popular</Typography>
-                                </MenuItem>
-                                <MenuItem onClick={handleCloseNavMenu}>
-                                    <Typography textAlign="center">My List</Typography>
-                                </MenuItem>
+                                <Link to="/" style={{ textDecoration: "none" }}>
+                                    <MenuItem onClick={handleCloseNavMenu}>
+                                        <Typography textAlign="center">Home</Typography>
+                                    </MenuItem>
+                                </Link>
+                                <Link to="/list-series" style={{ textDecoration: "none" }}>
+                                    <MenuItem onClick={handleCloseNavMenu}>
+                                        <Typography textAlign="center">Series</Typography>
+                                    </MenuItem>
+                                </Link>
+                                <Link to="/" style={{ textDecoration: "none" }}>
+                                    <MenuItem onClick={handleCloseNavMenu}>
+                                        <Typography textAlign="center">Movie</Typography>
+                                    </MenuItem>
+                                </Link>
+                                <Link to="/new-populer" style={{ textDecoration: "none" }}>
+                                    <MenuItem onClick={handleCloseNavMenu}>
+                                        <Typography textAlign="center">New and Popular</Typography>
+                                    </MenuItem>
+                                </Link>
+                                <Link to="/my-list" style={{ textDecoration: "none" }}>
+                                    <MenuItem onClick={handleCloseNavMenu}>
+                                        <Typography textAlign="center">My List</Typography>
+                                    </MenuItem>
+                                </Link>
                             </Menu>
                         </Box>
 
                         <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-                            <Button sx={{ my: 2, mx: 1, color: 'white', display: 'block' }}>
-                                Home
-                            </Button>
-                            <Button sx={{ my: 2, mx: 1, color: 'white', display: 'block' }}>
-                                Series
-                            </Button>
+                            <Link to="/" style={{ textDecoration: "none" }}>
+                                <Button sx={{ my: 2, mx: 1, color: 'white', display: 'block' }}>
+                                    Home
+                                </Button>
+                            </Link>
+                            <Link to="/list-series" style={{ textDecoration: "none" }}>
+                                <Button sx={{ my: 2, mx: 1, color: 'white', display: 'block' }}>
+                                    Series
+                                </Button>
+                            </Link>
                             <Button sx={{ my: 2, mx: 1, color: 'white', display: 'block' }}>
                                 Movie
                             </Button>
-                            <Button sx={{ my: 2, mx: 1, color: 'white', display: 'block' }}>
-                                New and Popular
-                            </Button>
-                            <Button sx={{ my: 2, mx: 1, color: 'white', display: 'block' }}>
-                                My List
-                            </Button>
+                            <Link to="/new-populer" style={{ textDecoration: "none" }}>
+                                <Button sx={{ my: 2, mx: 1, color: 'white', display: 'block' }}>
+                                    New and Popular
+                                </Button>
+                            </Link>
+                            <Link to="/my-list" style={{ textDecoration: "none" }}>
+                                <Button sx={{ my: 2, mx: 1, color: 'white', display: 'block' }}>
+                                    My List
+                                </Button>
+                            </Link>
                         </Box>
 
                         <Box sx={{ flexGrow: 0, display: { md: 'flex' }, }}>
