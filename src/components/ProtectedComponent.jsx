@@ -20,6 +20,7 @@ const ProtectedComponent = ({ children }) => {
         return (
             <></>
         )
+        // return;
     } else {
         return children;
     }

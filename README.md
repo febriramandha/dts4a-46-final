@@ -1,6 +1,13 @@
 # DTS REA4 Final Project
 
-Ketentuan lengkap bisa dilihat di [Final Project Guidelines](https://docs.google.com/document/d/122KyWNQ4xxU4aFwWbM4vIfH7LM4AH2CZEZa3YsEHjCk). 
+![](./public/review.gif)
+
+Link Live App : https://dts4a-46-final.netlify.app
+
+Penjelasan :
+Aplikasi ini adalah List Movie yang dibuat menggunakan React JS. Pada aplikasi ini terdapat fitur Registrasi, Login / Logout, Halaman Utama yang menampilkan daftar movie secara keseluruhan, serta beberapa menu navigasi yang menampilkan informasi daftar movie berdasarkan kategori tersebut.
+
+Ketentuan lengkap bisa dilihat di [Final Project Guidelines](https://docs.google.com/document/d/122KyWNQ4xxU4aFwWbM4vIfH7LM4AH2CZEZa3YsEHjCk).
 
 ## Daftar pair
 
