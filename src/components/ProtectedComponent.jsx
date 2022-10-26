@@ -17,10 +17,15 @@ const ProtectedComponent = ({ children }) => {
 
     // kalau pengen ada loading
     if (isloading) {
-        return;
+        return (
+            <></>
+        )
     } else {
         return children;
     }
+
+
+
 };
 
 export default ProtectedComponent;

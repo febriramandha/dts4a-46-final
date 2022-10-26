@@ -24,7 +24,7 @@ const LoginOrRegisterForm = ({ loginOrRegister }) => {
     password: "",
   });
 
-  const [user, isloading, error] = useAuthState(auth);
+  const [user, isloading] = useAuthState(auth);
 
   const textFieldEmailOnChangeHandler = (event) => {
     // Karena state berupa Object
