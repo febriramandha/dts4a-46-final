@@ -12,7 +12,6 @@ import ListSeries from './containers/ListSeries';
 import ListNewPopuler from './containers/ListNewPopuler';
 import MyList from './containers/MyList';
 import DetailMovies from './containers/DetailMovies';
-// import LoginLayout from "./components/LoginLayout";
 
 import LoginPage from "./containers/LoginPage";
 import RegisterPage from "./containers/RegisterPage";
