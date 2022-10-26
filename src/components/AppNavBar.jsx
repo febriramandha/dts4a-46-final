@@ -9,7 +9,17 @@ import Avatar from '@mui/material/Avatar';
 import Tooltip from '@mui/material/Tooltip';
 import { AppBar, Container, Button, Toolbar, Typography, Box, IconButton, Menu, MenuItem } from "@mui/material";
 
+import { useNavigate } from "react-router-dom";
+
+import { keluarAplikasi } from "../authentication/firebase";
+
+import { auth } from "../authentication/firebase";
+import { useAuthState } from "react-firebase-hooks/auth";
+
 const AppNavBar = () => {
+    const [user] = useAuthState(auth);
+    // Gunakan hooks useNavigate
+    const navigate = useNavigate();
 
     const [anchorElNav, setAnchorElNav] = React.useState(null);
     const [anchorElUser, setAnchorElUser] = React.useState(null);
@@ -27,6 +37,11 @@ const AppNavBar = () => {
 
     const handleCloseUserMenu = () => {
         setAnchorElUser(null);
+    };
+
+    const buttonLogoutOnClickHandler = () => {
+        keluarAplikasi();
+        navigate("/login");
     };
 
     return (
@@ -134,7 +149,9 @@ const AppNavBar = () => {
                         <Box sx={{ flexGrow: 0 }}>
                             <Tooltip title="Open settings">
                                 <IconButton onClick={handleOpenUserMenu} sx={{ p: 0, my: 2, mx: 2 }}>
-                                    <Typography textAlign="center" sx={{ color: 'white' }}>User</Typography>
+                                    <Typography textAlign="center" sx={{ color: 'white' }}>
+                                        User
+                                    </Typography>
                                 </IconButton>
                             </Tooltip>
                             <Menu
@@ -153,8 +170,11 @@ const AppNavBar = () => {
                                 open={Boolean(anchorElUser)}
                                 onClose={handleCloseUserMenu}
                             >
+                                <MenuItem>
+                                    <Typography textAlign="center">{user.email}</Typography>
+                                </MenuItem>
                                 <MenuItem onClick={handleCloseUserMenu}>
-                                    <Typography textAlign="center">Logout</Typography>
+                                    <Typography textAlign="center" onClick={buttonLogoutOnClickHandler}>Logout</Typography>
                                 </MenuItem>
                             </Menu>
                         </Box>

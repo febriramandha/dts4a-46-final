@@ -9,7 +9,13 @@ import Footer from './components/Footer';
 // import ListMovie from './components/ListMovie';
 import { Outlet } from "react-router-dom";
 
+
 function App() {
+  // const navigate = useNavigate();
+  // const [user, isloading, error] = useAuthState(auth);
+
+  // kalau tidak ada yg login arahkan ke "/login"
+
   return (
     // <div className="App">
     //   <header className="App-header">
